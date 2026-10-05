@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --text: #111827;
+  --muted: #6b7280;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e5e7eb;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.header {
+  height: 70px;
+  padding: 0 6%;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+main {
+  width: min(100%, 1000px);
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: var(--primary-dark);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 7vw, 58px);
+  line-height: 1.05;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.compressor {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+.upload-box {
+  border: 2px dashed #bfdbfe;
+  border-radius: 18px;
+  padding: 55px 20px;
+  text-align: center;
+  background: #f8fbff;
+  transition: 0.2s;
+}
+
+.upload-box:hover {
+  border-color: var(--primary);
+  background: #eff6ff;
+}
+
+.upload-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.upload-box h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.upload-box p {
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.upload-btn,
+.compress-btn,
+.download-btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  border: 0;
+  padding: 13px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.upload-btn:hover,
+.compress-btn:hover,
+.download-btn:hover {
+  background: var(--primary-dark);
+}
+
+.upload-btn input {
+  display: none;
+}
+
+.upload-box small {
+  display: block;
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+.controls {
+  margin-top: 25px;
+}
+
+.controls label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+#quality {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#compressBtn {
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 25px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stats div {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stats span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.stats strong {
+  font-size: 18px;
+}
+
+.download-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.info {
+  margin-top: 45px;
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+}
+
+.info h2 {
+  margin-bottom: 12px;
+}
+
+.info p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+footer a {
+  color: var(--muted);
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  main {
+    padding: 40px 14px;
+  }
+
+  .compressor {
+    padding: 14px;
+  }
+
+  .upload-box {
+    padding: 45px 15px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online image compressor. Compress JPG, PNG and WebP images quickly and securely in your browser.">
+  <title>Free Image Compressor - Compress JPG, PNG & WebP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">Compress<span>ly</span></div>
+    <nav>
+      <a href="#compressor">Compressor</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="badge">⚡ Fast • Free • Private</p>
+      <h1>Compress Images Online</h1>
+      <p>Reduce image size without complicated software. Your images stay on your device.</p>
+    </section>
+
+    <section class="compressor" id="compressor">
+      <div class="upload-box" id="uploadBox">
+        <div class="upload-icon">📷</div>
+        <h2>Drop your image here</h2>
+        <p>or choose an image from your device</p>
+
+        <label class="upload-btn">
+          Choose Image
+          <input type="file" id="imageInput" accept="image/jpeg,image/png,image/webp">
+        </label>
+
+        <small>JPG, PNG or WebP</small>
+      </div>
+
+      <div class="controls hidden" id="controls">
+        <label for="quality">
+          Compression quality:
+          <strong><span id="qualityValue">70</span>%</strong>
+        </label>
+
+        <input type="range" id="quality" min="10" max="100" value="70">
+
+        <button id="compressBtn">Compress Image</button>
+      </div>
+
+      <div class="result hidden" id="result">
+        <div class="stats">
+          <div>
+            <span>Original</span>
+            <strong id="originalSize">-</strong>
+          </div>
+
+          <div>
+            <span>Compressed</span>
+            <strong id="compressedSize">-</strong>
+          </div>
+
+          <div>
+            <span>Saved</span>
+            <strong id="savedPercent">-</strong>
+          </div>
+        </div>
+
+        <a id="downloadBtn" class="download-btn">Download Compressed Image</a>
+      </div>
+    </section>
+
+    <section class="info" id="about">
+      <h2>Free Online Image Compressor</h2>
+      <p>
+        Compress JPG, PNG and WebP images directly in your browser.
+        Your selected image is processed locally on your device.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Compressly</p>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
